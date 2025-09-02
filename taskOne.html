@@ -114,9 +114,6 @@
       text-align: center;
       border-radius: 6px;
     }
-    .grid div: hover {
-        background: #4caf50;
-    }
 
     /* Make responsive */
     @media (max-width: 768px) {
@@ -153,12 +150,12 @@
         <h2>Subheading article section</h2>
         <article>
           <h3>Article 1</h3>
-          <p>This is an example of a paragraph with <strong>bold text</strong> and <em>italic text</em>.</p>
-          <a href="https://google.com" target="_blank">Go to Google</a>
+          <p>This is an example of a paragraph with <strong>bold text</strong> and <em>italic text</em>.</p> 
+          <a href="https://google.com" target="_blank" rel="noopener noreferrer">Go to Google</a>
         </article>
         <article>
           <h3>Article 2</h3>
-          <img src="image.png" alt="Placeholder image" style="max-width:100%; border-radius:10px;">
+          <img src="image.png" alt="Placeholder image" width="300" height="200">
           <p>Images use <code>src</code> and <code>alt</code> attributes.</p>
         </article>
       </section>
@@ -179,6 +176,7 @@
           <label>Gender:</label>
           <input type="radio" name="gender" value="male"> Male
           <input type="radio" name="gender" value="female"> Female
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
           <label for="hobbies">Hobbies:</label>
           <input type="checkbox" name="hobbies" value="coding"> Coding
@@ -193,6 +191,10 @@
 
           <label for="message">Message:</label>
           <textarea id="message" rows="4" placeholder="Write something..."></textarea>
+          <input type="radio" id="male" name="gender" value="male">
+<label for="male">Male</label>
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label>
 
           <button type="submit">Submit</button>
         </form>
