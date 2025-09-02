@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Basics Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+    #output {
+      margin-top: 1rem;
+      padding: 1rem;
+      border: 1px solid #333;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>DOM Basics Example</h1>
+
+  <p id="text">This text will change when you click the button.</p>
+
+  <button id="changeTextBtn">Change Text</button>
+
+  <hr>
+
+  <h2>Add Items to a List</h2>
+  <input type="text" id="itemInput" placeholder="Enter an item">
+  <button id="addItemBtn">Add Item</button>
+  <ul id="itemList"></ul>
+
+  <hr>
+
+  <h2>Interactive Output</h2>
+  <button id="countBtn">Click me</button>
+  <p id="output">You clicked 0 times</p>
+
+  <script>
+    // Change text example
+    const changeTextBtn = document.getElementById("changeTextBtn");
+    const text = document.getElementById("text");
+
+    changeTextBtn.onclick = function() {
+      text.innerHTML = "Text changed! 🎉";
+    }
+
+    // Add items to a list
+    const addItemBtn = document.getElementById("addItemBtn");
+    const itemInput = document.getElementById("itemInput");
+    const itemList = document.getElementById("itemList");
+
+    addItemBtn.onclick = function() {
+      const item = itemInput.value.trim();
+      if(item !== "") {
+        const li = document.createElement("li");
+        li.innerHTML = item;
+        itemList.appendChild(li);
+        itemInput.value = "";
+      } else {
+        alert("Please enter an item!");
+      }
+    }
+
+    // Click counter example
+    const countBtn = document.getElementById("countBtn");
+    const output = document.getElementById("output");
+    let count = 0;
+
+    countBtn.onclick = function() {
+      count++;
+      output.innerHTML = `You clicked ${count} ${count === 1 ? "time" : "times"}`;
+    }
+  </script>
+  
+</body>
+</html>

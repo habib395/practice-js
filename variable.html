@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables & Data Types Example</title>
+</head>
+<body>
+  <h1>JavaScript Variables & Data Types Example</h1>
+  <p>Check the browser console (F12) to see the output.</p>
+
+  <script>
+    // ----------- Variables Declaration -----------
+    var oldVariable = "I am var";
+    console.log("var example:", oldVariable);
+
+    let age = 25;
+    age = 26;
+    console.log("let example:", age);
+
+    const country = "Bangladesh";
+    console.log("const example:", country);
+
+    // ----------- Data Types -----------
+
+    // 1. String
+    let name = "Habib";
+    console.log("String:", name);
+
+    // 2. Number
+    let score = 95;
+    let pi = 3.1416;
+    console.log("Number:", score, pi);
+
+    // 3. Boolean
+    let isLoggedIn = true;
+    let hasPermission = false;
+    console.log("Boolean:", isLoggedIn, hasPermission);
+
+    // 4. Null
+    let emptyValue = null;
+    console.log("Null:", emptyValue);
+
+    // 5. Undefined
+    let notAssigned;
+    console.log("Undefined:", notAssigned);
+
+    // 6. Object
+    let student = {
+      id: 101,
+      name: "Rahim",
+      isActive: true,
+    };
+    console.log("Object:", student);
+    console.log("Object Access:", student.name);
+
+    // 7. Array
+    let numbers = [10, 20, 30, 40];
+    let fruits = ["Apple", "Mango", "Banana"];
+    console.log("Array:", numbers);
+    console.log("First Fruit:", fruits[0]);
+
+    // 8. Symbol
+    let uniqueId = Symbol("id");
+    console.log("Symbol:", uniqueId);
+
+    // 9. BigInt
+    let bigNumber = 1234567890123456789012345678901234567890n;
+    console.log("BigInt:", bigNumber);
+
+    // ----------- Typeof Operator -----------
+    console.log("typeof name:", typeof name);         
+    console.log("typeof score:", typeof score);       
+    console.log("typeof isLoggedIn:", typeof isLoggedIn); 
+    console.log("typeof emptyValue:", typeof emptyValue); 
+    console.log("typeof notAssigned:", typeof notAssigned); 
+    console.log("typeof student:", typeof student);   
+    console.log("typeof numbers:", typeof numbers);   
+    console.log("typeof uniqueId:", typeof uniqueId); 
+    console.log("typeof bigNumber:", typeof bigNumber); 
+  </script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML + CSS Tags</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .main {
+      flex: 1;
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    aside {
+      flex: 1;
+      background: #ddd;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    article {
+      border-bottom: 1px solid #2b40c5;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+    }
+    article h3 {
+        text-align: center;
+    }
+    article a {
+        font-style: italic;
+    }
+
+    form {
+      margin-top: 1rem;
+    }
+
+    label {
+      display: block;
+      margin: 0.5rem 0 0.2rem;
+    }
+
+    input, textarea, select, button {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #555;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .grid div {
+      background: #4caf50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 6px;
+    }
+    .grid div: hover {
+        background: #4caf50;
+    }
+
+    /* Make responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+
+    footer {
+      text-align: center;
+      background: #333;
+      color: white;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML & CSS Examples</h1>
+    <nav>
+      <ul>
+        <li><a href="#articles">Articles</a></li>
+        <li><a href="#form">Form</a></li>
+        <li><a href="#grid">Grid</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main class="main">
+      <section id="articles">
+        <h1>Main Heading Articles Section</h1>
+        <h2>Subheading article section</h2>
+        <article>
+          <h3>Article 1</h3>
+          <p>This is an example of a paragraph with <strong>bold text</strong> and <em>italic text</em>.</p>
+          <a href="https://google.com" target="_blank">Go to Google</a>
+        </article>
+        <article>
+          <h3>Article 2</h3>
+          <img src="image.png" alt="Placeholder image" style="max-width:100%; border-radius:10px;">
+          <p>Images use <code>src</code> and <code>alt</code> attributes.</p>
+        </article>
+      </section>
+
+      <!-- form section -->
+      <section id="form">
+        <h2>Form Example</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" placeholder="Enter password">
+
+          <label>Gender:</label>
+          <input type="radio" name="gender" value="male"> Male
+          <input type="radio" name="gender" value="female"> Female
+
+          <label for="hobbies">Hobbies:</label>
+          <input type="checkbox" name="hobbies" value="coding"> Coding
+          <input type="checkbox" name="hobbies" value="music"> Music
+
+          <label for="country">Country:</label>
+          <select id="country">
+            <option>Bangladesh</option>
+            <option>India</option>
+            <option>USA</option>
+          </select>
+
+          <label for="message">Message:</label>
+          <textarea id="message" rows="4" placeholder="Write something..."></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      <!--  Grid  -->
+      <section id="grid">
+        <h2>CSS Grid Example</h2>
+        <div class="grid">
+          <div>Box 1</div>
+          <div>Box 2</div>
+          <div>Box 3</div>
+          <div>Box 4</div>
+          <div>Box 5</div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Sidebar -->
+    <aside>
+      <h3>Sidebar</h3>
+      <ul>
+        <li>Link 1</li>
+        <li>Link 2</li>
+        <li>Link 3</li>
+      </ul>
+    </aside>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Example Website | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
